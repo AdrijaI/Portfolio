@@ -4,3 +4,15 @@ h1 {
     text-align: center;
     line-height: 50px;
 }
+
+.left-container {
+    max-width: 50%;
+    height: 760px;
+    background-color: bisque;
+}
+
+.right-container {
+    max-width: 50%;
+    height: 760px;
+    background-color: burlywood;
+}
