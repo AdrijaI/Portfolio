@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.ttf')
+}
+
 body {
     margin: 0px;
 }
@@ -8,8 +13,8 @@ h1 {
     font-weight: 600;
     color: #FFFFFF;
     text-align: center;
-    line-height: 24px;
-    grid-area: 4/2/7/5;
+    line-height: 34px;
+    grid-area: 3/1/7/6;
     z-index: 1;
 }
 
@@ -33,8 +38,6 @@ header {
 
 .left-image {
     height: 80%;
-    position: relative;
-    top: 70px;
 }
 
 .right-container {
@@ -61,6 +64,49 @@ header {
     color: #FFFFFF;
 }
 
+.nav-li a:hover {
+    color: #fcafb7;
+    border-bottom: solid 2px #FFFFFF;
+    transition: color 1s;
+}
+
+@keyframes arrow {
+    0% {
+        transform: translateY(0px);
+    }
+    60% {
+        transform: translateY(3px);
+    }
+    100% {
+        transform: translateY(-2px);
+    }
+}
+
+span {
+    display: inline-block;
+    font-family: 'icomoon';
+    margin-left: 30px;
+    animation: arrow 1.5s linear;
+    animation-iteration-count: infinite;
+}
+
+.view-more {
+    grid-row-start: 6;
+    grid-column: 2/5;
+    height: 40px;
+    background-color: transparent;
+    border: solid 3px #FFFFFF;
+    color: #FFFFFF;
+    font-size: 1.15em;
+    z-index: 1;
+    transition: background-color 1.5s;   
+}
+/*
+.view-more:hover {
+    background-color: #E7717D;
+    transition: background-color 1s;
+} */
+
 @media screen and (min-width: 650px) {
     .grid-container {
         grid-template: repeat(8, 1fr) / repeat(10, 1fr);
@@ -68,13 +114,18 @@ header {
 
     header {
         grid-area: 1/1/3/11;
-        font-size: 2em;
+        font-size: 1.6em;
     }
 
     h1 {
         grid-area: 4/1/7/11;
         font-size: 2em;
-        line-height: 50px;
+        line-height: 55px;
+        margin: 0px;
+    }
+
+    .nav-li+.nav-li {
+        margin-left: 25px;
     }
     
     .right-container {
@@ -84,12 +135,18 @@ header {
     }
 
     .right-image {
-        max-width: 80%;
+        max-width: 90%;
     }
 
     .left-image {
-        height: 100%;
+        height: 90%;
         top: 0px;
+    }
+
+    .view-more {
+        cursor: pointer;
+        grid-row-start: 6;
+        grid-column: 5/8;
     }
 }
 /*
@@ -106,7 +163,12 @@ header {
         
     }
 
+    .left-image {
+        height: 100%;
+    }
+
     header {
         grid-area: 1/1/3/11;
     }
+
 }
