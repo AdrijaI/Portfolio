@@ -24,9 +24,18 @@ h1 {
 }
 
 header {
-    grid-area: 1/1/2/6;
-    z-index: 1;
+    grid-area: 1/1/4/6;
+    z-index: 3;
     align-self: center;
+}
+
+.layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #2E151B;
+    z-index: 2;
+    opacity: 0%;
 }
 
 .left-container {
@@ -47,16 +56,18 @@ header {
 .navigate {
     text-align: center;
     padding-inline-start: 0px;
+    margin: auto;
+    border-collapse: collapse;
 }
 
 .nav-li {
-    display: inline-block;
     font-family: 'Nunito';
     font-size: 0.8em;
+    padding: 7px;
 }
 
 .nav-li+.nav-li {
-    margin-left: 15px;
+    margin-left: 20px;
 }
 
 .nav-li a {
@@ -68,6 +79,16 @@ header {
     color: #fcafb7;
     border-bottom: solid 2px #FFFFFF;
     transition: color 1s;
+}
+
+.skills-li {
+    font-family: 'Nunito';
+    color: #376E6F;
+    font-size: 0.78em;
+    background-color: #FFFFFF;
+    text-align: start;
+    padding-left: 7px;
+    visibility: hidden;
 }
 
 @keyframes arrow {
@@ -98,14 +119,8 @@ span {
     border: solid 3px #FFFFFF;
     color: #FFFFFF;
     font-size: 1.15em;
-    z-index: 1;
-    transition: background-color 1.5s;   
+    z-index: 2;
 }
-/*
-.view-more:hover {
-    background-color: #E7717D;
-    transition: background-color 1s;
-} */
 
 @media screen and (min-width: 650px) {
     .grid-container {
@@ -113,7 +128,7 @@ span {
     }
 
     header {
-        grid-area: 1/1/3/11;
+        grid-area: 1/1/5/11;
         font-size: 1.6em;
     }
 
@@ -168,7 +183,11 @@ span {
     }
 
     header {
-        grid-area: 1/1/3/11;
+        grid-area: 1/1/5/11;
+    }
+
+    .nav-li+.nav-li {
+        padding-left: 40px;
     }
 
 }

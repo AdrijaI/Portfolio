@@ -7,21 +7,55 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="./assets/js/script.js"></script>
+        
     </head>
 
     <body>
         <div class="grid-container">
             <header>
                 <nav>
-                    <ul class="navigate">
-                        <li class="nav-li"><a href="#">ABOUT ME</a></li>
-                        <li class="nav-li"><a href="#">PROJECTS</a></li>
-                        <li class="nav-li"><a href="#">SKILLS</a></li>
-                        <li class="nav-li"><a href="#">CONTACTS</a></li>
-                    </ul>
+                    <table id="navigate" class="navigate">
+                        <tr>
+                            <th class="nav-li"><a href="#">ABOUT ME</a></th>
+                            <th id="skills" class="nav-li"><a href="#">SKILLS</a></th>
+                            <th class="nav-li"><a href="#">PROJECTS</a></th>
+                            <th class="nav-li"><a href="#">CONTACTS</a></th>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td colspan="2" class="skills-li">HTML</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td colspan="2" class="skills-li">CSS</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td colspan="2" class="skills-li">JavaScript</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td colspan="2" class="skills-li">React.js</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td colspan="2" class="skills-li">SQL</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
                 </nav>
             </header>
+
+            <div class="layer"></div>
 
             <div class="left-container">
                 <img class="left-image" src="./assets/img/fons1.png">
@@ -34,11 +68,14 @@
             <h1>Hello, I am Adrija Ikauniece.<br>I'm a front-end developer and designer.</h1>
 
             <button type="button" class="view-more">VIEW MORE <span>g</span></button>
+            
         </div>
 
         <footer>
 
         </footer>
+
+        <script src="./assets/js/script.js" type="text/javascript"></script>
     </body>
 
 </html>
