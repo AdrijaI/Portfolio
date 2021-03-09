@@ -45,3 +45,4 @@ function hideTable() {
 
 skills.addEventListener('mouseover', showTable, false);
 skills.addEventListener('mouseout', hideTable, false);
+

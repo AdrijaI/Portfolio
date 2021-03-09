@@ -18,6 +18,8 @@ h1 {
     z-index: 1;
 }
 
+/* --- Top section styles --- */
+
 .grid-container {
     display: grid;
     grid-template: repeat(8, 1fr) / repeat(5, 1fr);
@@ -122,6 +124,96 @@ span {
     z-index: 2;
 }
 
+/* --- About section styles --- */
+
+a .social {
+    font-family: 'icomoon';
+    display: inline-block;
+    box-sizing: border-box;
+    width: 45px;
+    height: 45px;
+    margin: 10px;
+    text-align: center;
+    border: solid 2px #999999;
+    border-radius: 50%;
+}
+
+.facebook:hover {
+    background-color: #8B9DC3;
+    border: solid 2px #8B9DC3;
+}
+
+.linkedin:hover {
+    background-color: #00A0DC;
+    border: solid 2px #00A0DC;
+}
+
+.github:hover {
+    background-color: #F4CBB2;
+    border: solid 2px #F4CBB2;
+}
+
+h3 {
+    margin: 0;
+    padding: 10px;
+    color: #999999;
+}
+
+h3:hover {
+    color: #FFFFFF;
+}
+
+#about {
+    padding: 30px 0px;
+}
+
+.about-me {
+    max-width: 80%;
+    margin: auto;
+}
+
+.about-image {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 30px;
+}
+
+.about-image-full {
+    display: none;
+}
+
+h2 {
+    font-family: 'Montserrat';
+    color: #E7717D;
+    font-size: 1.2em;
+}
+
+p {
+    font-family: 'Nunito';
+    color: #376E6F;
+}
+
+/* --- Projects section --- */
+
+#projects {
+    padding: 5% 9%;
+    background-color: #2F4454;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.portfolio {
+    width: 55%;
+    height: 150px;
+    background-color: #999999;
+    margin-top: 30px;
+}
+
+
 @media screen and (min-width: 650px) {
     .grid-container {
         grid-template: repeat(8, 1fr) / repeat(10, 1fr);
@@ -163,6 +255,37 @@ span {
         grid-row-start: 6;
         grid-column: 5/8;
     }
+
+    /* --- About (media) section --- */
+
+    #about {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .about-image {
+        display: none;
+    }
+
+    .about-image-full {
+        display: block;
+        margin: 40px;
+        max-width: 30%;
+    }
+
+    .about-me {
+        width: 40%;
+        margin: 5% 5% 5% 9%;
+    }
+
+    /* --- Projects (media) section --- */
+
+    .portfolio {
+        width: 350px;
+        height: 250px;
+        margin: 40px 0px;
+    }
+
 }
 /*
 @media screen and (min-width: 425px) and (max-width: 900px) {
