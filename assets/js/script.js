@@ -46,3 +46,20 @@ function hideTable() {
 skills.addEventListener('mouseover', showTable, false);
 skills.addEventListener('mouseout', hideTable, false);
 
+
+let navigation = document.getElementById('nav');
+let prevScrollpos = window.pageYOffset;
+
+window.onscroll = function() {
+    let currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+        navigation.classList.add('fixed');
+        navigation.style.top = "0";
+    } else {
+        navigation.classList.remove('fixed');
+        navigation.style.top = "-50px";
+    }
+    prevScrollpos = currentScrollPos;
+
+  }
+
