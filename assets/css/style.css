@@ -11,6 +11,10 @@ body {
     margin: 0px;
 }
 
+a {
+    z-index: 5;
+}
+
 h1 {
     font-family: 'Montserrat';
     font-size: 1.2em;
@@ -147,6 +151,7 @@ span {
 /* --- About section styles --- */
 
 a .social {
+    position:relative;
     font-family: 'icomoon';
     display: inline-block;
     box-sizing: border-box;
@@ -156,6 +161,7 @@ a .social {
     text-align: center;
     border: solid 2px #999999;
     border-radius: 50%;
+    z-index: 3;
 }
 
 .facebook:hover {

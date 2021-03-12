@@ -10,9 +10,14 @@ function buttonColorChangeBack() {
     button.style.transition = 'background-color 1s';
 }
 
+function linkToAboutSection() {
+    window.location = '#about';
+}
+
 
 button.addEventListener('mouseover', buttonColorChange, false);
 button.addEventListener('mouseout', buttonColorChangeBack, false);
+button.addEventListener('click', linkToAboutSection, false);
 
 
 let skills = document.getElementById('skills');
@@ -62,4 +67,6 @@ window.onscroll = function() {
     prevScrollpos = currentScrollPos;
 
   }
+
+
 
