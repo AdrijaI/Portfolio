@@ -16,7 +16,7 @@ a {
 }
 
 h1 {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.2em;
     font-weight: 600;
     color: #FFFFFF;
@@ -87,7 +87,7 @@ nav, th {
 }
 
 .nav-li {
-    font-family: 'Nunito';
+    font-family: 'Nunito', sans-serif;
     font-size: 0.8em;
     padding: 7px;
 }
@@ -108,7 +108,7 @@ nav, th {
 }
 
 .skills-li {
-    font-family: 'Nunito';
+    font-family: 'Nunito', sans-serif;
     color: #376E6F;
     font-size: 0.78em;
     background-color: #FFFFFF;
@@ -167,16 +167,19 @@ a .social {
 .facebook:hover {
     background-color: #8B9DC3;
     border: solid 2px #8B9DC3;
+    transition: background-color 0.5s, border 0.5s;
 }
 
 .linkedin:hover {
     background-color: #00A0DC;
     border: solid 2px #00A0DC;
+    transition: background-color 0.5s, border 0.5s;
 }
 
 .github:hover {
     background-color: #F4CBB2;
     border: solid 2px #F4CBB2;
+    transition: background-color 0.5s, border 0.5s;
 }
 
 h4 {
@@ -214,13 +217,13 @@ h4:hover {
 }
 
 h2 {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     color: #E7717D;
     font-size: 1.2em;
 }
 
 p {
-    font-family: 'Nunito';
+    font-family: 'Nunito', sans-serif;
     color: #376E6F;
 }
 
@@ -237,23 +240,28 @@ p {
     justify-content: space-between;
 }
 
-.img1, .img2, .img3 {
+.img {
     width: 100%;
     height: 120px;
-    
     background-size: cover;
     background-position: center;
+    opacity: 70%;
 }
 
-.img1 {
+.img:hover {
+    opacity: 100%;
+    transition: opacity 0.5s;
+}
+
+.a {
     background-image: url('../img/magebit.jpg');
 }
 
-.img2 {
+.b {
     background-image: url('../img/sigmund-4UGmm3WRUoQ-unsplash.jpg');
 }
 
-.img3 {
+.c {
     background-image: url('../img/sigmund-4UGmm3WRUoQ-unsplash.jpg');
 }
 
@@ -270,9 +278,16 @@ p {
 h3 {
     flex-basis: 70%;
     color: #FFFFFF;
-    font-family: 'Nunito';
+    font-family: 'Nunito', sans-serif;
     font-weight: 300;
     padding-left: 20px;
+}
+
+/* --- Footer section styles --- */
+
+footer {
+    background-color: #376E6F;
+    height: 150px;
 }
 
 
@@ -295,20 +310,74 @@ h3 {
     .nav-li+.nav-li {
         margin-left: 25px;
     }
+
+    @keyframes translate1 {
+        0% {
+            transform: translateY(0%);
+        }
+        100% {
+            transform: translateY(-100%);
+        }
+    }
+
+    @keyframes translate2 {
+        0% {
+            transform: translateY(0%);
+        }
+        100% {
+            transform: translateY(100%);
+        }
+    }
+
+    @keyframes translate3 {
+        0% {
+            transform: translateY(0%);
+        }
+        100% {
+            transform: translateY(245%);
+        }
+    }
     
+    @keyframes translate4 {
+        0% {
+            transform: translateY(0%);
+        }
+        100% {
+            transform: translateY(-200%);
+        }
+    }
+
     .right-container {
         display: block;
         grid-area: 1/6/9/11;
         background: linear-gradient(90deg, rgba(55,110,111,1) 0%, rgba(47,68,84,1) 30%);
+        position: relative;
+        top: 100%;
+        animation: translate1 2s;
+        animation-fill-mode: forwards;
     }
 
     .right-image {
         max-width: 80%;
+        position: relative;
+        bottom: 200%;
+        animation: translate3 2s;
+        animation-fill-mode: forwards;
+    }
+
+    .left-container {
+        position: relative;
+        bottom: 100%;
+        animation: translate2 2s;
+        animation-fill-mode: forwards;
     }
 
     .left-image {
-        top: 0px;
+        position: relative;
+        top: 200%;
         max-width: 80%;
+        animation: translate4 2s;
+        animation-fill-mode: forwards;
     }
 
     .view-more {
@@ -351,18 +420,11 @@ h3 {
         margin: 40px 0px;
     }
 
-    .img1, .img2, .img3 {
+    .img {
         height: 150px;
     }
 
 }
-/*
-@media screen and (min-width: 425px) and (max-width: 900px) {
-    .right-container {
-        display: block;
-        grid-area: 1/3/9/11;
-    }
-} */
 
 @media screen and (min-width: 1100px) {
     .left-image {
@@ -390,9 +452,11 @@ h3 {
     .portfolio {
         margin: 20px;
         display: block;
+        position: relative;
+        z-index: 5;
     }
 
-    .img1, .img2, .img3 {
+    .img {
         width: 100%;
         height: 250px;
     }

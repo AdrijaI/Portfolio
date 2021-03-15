@@ -36,8 +36,6 @@ function showTable() {
     layer.style.transition = 'opacity 1s';
 }
 
-
-
 function hideTable() {
     for(let i=0; i<skillTable.length; i++) {
         skillTable[i].style.visibility = 'hidden';
@@ -68,5 +66,13 @@ window.onscroll = function() {
 
   }
 
+let leftContainer = document.querySelector('.left-container');
+let leftImage = document.querySelector('.left-image');
+let rightContainer = document.querySelector('.right-container');
+let rightImage = document.querySelector('.right-image');
 
+function translate() {
+    leftContainer.style.bottom = '0%'
+    leftContainer.style.transition = 'bottom 2s';
+}
 
